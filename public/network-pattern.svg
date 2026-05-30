@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1200" viewBox="0 0 1920 1200">
+
+  <!-- LEFT SIDE -->
+  <g fill="#f3f4f6" font-family="monospace" font-weight="bold">
+    <g transform="translate(100, 120) rotate(-5)">
+      <text font-size="30" opacity="0.35">FTTH</text>
+    </g>
+    <g transform="translate(140, 220) rotate(4)">
+      <text font-size="20" opacity="0.25">GPON</text>
+    </g>
+    <g transform="translate(80, 340) rotate(-3)">
+      <text font-size="38" opacity="0.40">DOCKER</text>
+    </g>
+    <g transform="translate(150, 460) rotate(5)">
+      <text font-size="24" opacity="0.30">KUBERNETES</text>
+    </g>
+    <g transform="translate(100, 560) rotate(-4)">
+      <text font-size="22" opacity="0.25">K8s</text>
+    </g>
+    <g transform="translate(130, 680) rotate(3)">
+      <text font-size="18" opacity="0.20">ORQUESTACIÓN</text>
+    </g>
+    <g transform="translate(80, 780) rotate(-6)">
+      <text font-size="30" opacity="0.35">DEVOPS</text>
+    </g>
+    <g transform="translate(160, 900) rotate(4)">
+      <text font-size="22" opacity="0.25">LINUX</text>
+    </g>
+    <g transform="translate(100, 1000) rotate(-2)">
+      <text font-size="28" opacity="0.30">BASH</text>
+    </g>
+    <g transform="translate(140, 1100) rotate(5)">
+      <text font-size="18" opacity="0.20">AUTOMATIZACIÓN</text>
+    </g>
+  </g>
+
+  <!-- RIGHT SIDE -->
+  <g fill="#f3f4f6" font-family="monospace" font-weight="bold" text-anchor="end">
+    <g transform="translate(1820, 150) rotate(4)">
+      <text font-size="36" opacity="0.35">PYTHON</text>
+    </g>
+    <g transform="translate(1860, 280) rotate(-3)">
+      <text font-size="52" opacity="0.45">IA</text>
+    </g>
+    <g transform="translate(1800, 400) rotate(5)">
+      <text font-size="20" opacity="0.22">INTELIGENCIA ARTIFICIAL</text>
+    </g>
+    <g transform="translate(1840, 520) rotate(-5)">
+      <text font-size="28" opacity="0.30">REDES</text>
+    </g>
+    <g transform="translate(1780, 640) rotate(3)">
+      <text font-size="24" opacity="0.25">INFRAESTRUCTURA</text>
+    </g>
+    <g transform="translate(1830, 760) rotate(-4)">
+      <text font-size="18" opacity="0.20">FIBRA ÓPTICA</text>
+    </g>
+    <g transform="translate(1800, 860) rotate(6)">
+      <text font-size="26" opacity="0.30">TELECOM</text>
+    </g>
+    <g transform="translate(1850, 980) rotate(-2)">
+      <text font-size="20" opacity="0.25">HFC → FTTH</text>
+    </g>
+    <g transform="translate(1790, 1080) rotate(4)">
+      <text font-size="18" opacity="0.20">MIGRACIÓN TECNOLÓGICA</text>
+    </g>
+    <g transform="translate(1840, 1160) rotate(-3)">
+      <text font-size="16" opacity="0.18">CI/CD</text>
+    </g>
+  </g>
+
+  <g fill="#f3f4f6" font-family="monospace" font-weight="bold">
+    <g transform="translate(60, 50) rotate(-8)">
+      <text font-size="18" opacity="0.18">TELECOMUNICACIONES</text>
+    </g>
+  </g>
+  <g fill="#f3f4f6" font-family="monospace" font-weight="bold" text-anchor="end">
+    <g transform="translate(1860, 60) rotate(7)">
+      <text font-size="18" opacity="0.18">INGENIERÍA</text>
+    </g>
+  </g>
+</svg>

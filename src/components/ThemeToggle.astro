@@ -1,9 +1,8 @@
 ---
 import SunIcon from "./icons/Sun.astro"
 import MoonIcon from "./icons/Moon.astro"
-import SystemIcon from "./icons/System.astro"
 
-const THEMES = ["Light", "Dark", "System"]
+const THEMES = ["Light", "Dark"]
 ---
 
 <div class="relative ml-1 mr-1">
@@ -18,20 +17,16 @@ const THEMES = ["Light", "Dark", "System"]
       id="dark"
       class="theme-toggle-icon absolute size-5 transition-all"
     />
-    <SystemIcon
-      id="system"
-      class="theme-toggle-icon absolute size-5 transition-all"
-    />
   </button>
   <div
     transition:persist
     id="themes-menu"
-    class="absolute hidden scale-80 top-8 right-0 text-sm p-1 min-w-[8rem] rounded-md border border-gray-100 bg-white/90 dark:bg-gray-900/90 dark:border-gray-500/20 shadow-[0_3px_10px_rgb(0,0,0,0.2)] backdrop-blur-md"
+    class="absolute hidden scale-80 top-8 right-0 text-sm p-1 min-w-[8rem] rounded-md border border-[#3d0c0c]/10 bg-white/90 dark:border-white/10 dark:bg-[#3d0c0c]/90 shadow-[0_3px_10px_rgb(0,0,0,0.2)] backdrop-blur-md"
   >
     <ul>
       {
         THEMES.map((theme) => (
-          <li class="themes-menu-option px-2 py-1.5 cursor-default hover:bg-neutral-400/40 dark:hover:bg-gray-500/50 rounded-sm">
+            <li class="themes-menu-option px-2 py-1.5 cursor-default hover:bg-[#3d0c0c]/10 dark:hover:bg-white/10 rounded-sm">
             {theme}
           </li>
         ))
@@ -60,11 +55,10 @@ const THEMES = ["Light", "Dark", "System"]
 </style>
 
 <script>
-  type ThemePreference = "dark" | "light" | "system"
+  type ThemePreference = "dark" | "light"
 
   const DARK: ThemePreference = "dark"
   const LIGHT: ThemePreference = "light"
-  const SYSTEM: ThemePreference = "system"
   const THEME_STORAGE_KEY = "theme"
 
   let remove: (() => void) | null = null
@@ -73,10 +67,10 @@ const THEMES = ["Light", "Dark", "System"]
 
   const getThemePreference = (): ThemePreference => {
     if (typeof localStorage !== "undefined") {
-      return (localStorage.getItem(THEME_STORAGE_KEY) as ThemePreference) ?? SYSTEM
+      return (localStorage.getItem(THEME_STORAGE_KEY) as ThemePreference) ?? DARK
     }
 
-    return matchMedia.matches ? DARK : LIGHT
+    return DARK
   }
 
   const updateIcon = (themePreference: ThemePreference): void => {
@@ -95,9 +89,7 @@ const THEMES = ["Light", "Dark", "System"]
     }
 
     const themePreference = getThemePreference()
-    const isDark =
-      themePreference === DARK ||
-      (themePreference === SYSTEM && matchMedia.matches)
+    const isDark = themePreference === DARK
 
     updateIcon(themePreference)
     document.documentElement.classList.toggle("dark", isDark)

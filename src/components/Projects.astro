@@ -4,6 +4,7 @@ import NextJS from "./icons/NextJS.astro"
 import Tailwind from "./icons/Tailwind.astro"
 import ExternalLink from "./icons/ExternalLink.astro"
 import LinkButton from "./LinkButton.astro"
+import CodeIcon from "./icons/Code.astro"
 import projectsData from "@/data/projects.json"
 
 const TAGS: Record<string, { name: string; class: string; icon: any }> = {
@@ -16,6 +17,56 @@ const TAGS: Record<string, { name: string; class: string; icon: any }> = {
     name: "Tailwind CSS",
     class: "bg-[#003159] text-white",
     icon: Tailwind,
+  },
+  AUTOCAD: {
+    name: "AutoCAD Map 3D",
+    class: "bg-[#1a3a5c] text-white",
+    icon: CodeIcon,
+  },
+  EXCEL: {
+    name: "Excel",
+    class: "bg-[#1d6f42] text-white",
+    icon: CodeIcon,
+  },
+  OPTISYSTEM: {
+    name: "OptiSystem",
+    class: "bg-[#4a1a6b] text-white",
+    icon: CodeIcon,
+  },
+  DOCKER: {
+    name: "Docker",
+    class: "bg-[#0db7ed] text-black",
+    icon: CodeIcon,
+  },
+  KUBERNETES: {
+    name: "Kubernetes",
+    class: "bg-[#326ce5] text-white",
+    icon: CodeIcon,
+  },
+  IA: {
+    name: "IA",
+    class: "bg-[#7c3aed] text-white",
+    icon: CodeIcon,
+  },
+  PYTHON: {
+    name: "Python",
+    class: "bg-[#3776ab] text-white",
+    icon: CodeIcon,
+  },
+  REDIS: {
+    name: "Redis",
+    class: "bg-[#dc382d] text-white",
+    icon: CodeIcon,
+  },
+  NGINX: {
+    name: "Nginx",
+    class: "bg-[#009639] text-white",
+    icon: CodeIcon,
+  },
+  GITHUB_ACTIONS: {
+    name: "GitHub Actions",
+    class: "bg-[#2088ff] text-white",
+    icon: CodeIcon,
   },
 }
 
@@ -30,14 +81,14 @@ const PROJECTS = projectsData.map((project) => ({
     PROJECTS.map(({ image, title, description, tags, link, github }) => (
     <article class="flex flex-col space-x-0 space-y-6 group md:flex-row md:space-x-10 md:space-y-0">
   <div class="w-full md:w-1/2">
-    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition-all duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-[0_20px_60px_-10px_rgba(251,191,36,0.2)] lg:border lg:border-gray-800 lg:hover:border-yellow-400/30 lg:hover:bg-gray-800/50">
-      <img alt={title} class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition-all duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-[0_20px_60px_-10px_rgba(61,12,12,0.12)] dark:md:group-hover:shadow-[0_20px_60px_-10px_rgba(201,168,76,0.2)] lg:border lg:border-[#3d0c0c]/10 dark:lg:border-white/10 lg:hover:border-[#8a6d1b]/30 dark:lg:hover:border-[#c9a84c]/30 lg:hover:bg-[#3d0c0c]/5 dark:lg:hover:bg-white/5">
+      <img alt={title} class="object-cover object-top w-full aspect-[4/3] transition duration-500 md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
       <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" aria-hidden="true"></div>
     </div>
   </div>
 
   <div class="w-full md:w-1/2 md:max-w-lg flex flex-col justify-center">
-    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+    <h3 class="text-2xl font-bold text-[#3d0c0c] dark:text-white">
       {title}
     </h3>
     <ul class="flex flex-row flex-wrap mt-3 gap-2">
@@ -53,7 +104,7 @@ const PROJECTS = projectsData.map((project) => ({
       ))}
     </ul>
 
-    <p class="mt-3 text-gray-700 dark:text-gray-400 text-pretty">{description}</p>
+    <p class="mt-3 text-gray-700 dark:text-gray-200 text-pretty">{description}</p>
     <footer class="flex items-center mt-4 gap-x-4">
       {github && (
         <LinkButton href={github}>

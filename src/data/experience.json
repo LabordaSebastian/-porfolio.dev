@@ -1,22 +1,29 @@
 [
   {
-    "date": "Septiembre 2022 - Actualidad",
-    "title": "Creador de Contenido",
-    "company": "Twitch",
-    "description": "Divulgo sobre programación y desarrollo web en diferentes plataformas. Galardonado como mejor creador de contenido de habla no-inglesa en 2022 y mejor comunidad en 2023 por GitHub.",
-    "link": "https://twitch.tv/midudev",
+    "date": "Feb 2026 - Presente",
+    "title": "Diseñador FTTH Independiente",
+    "company": "BL Telecomunicaciones",
+    "description": "Diseño integral y digitalización de redes de acceso de fibra óptica (FTTH), implementando soluciones georreferenciadas. Utilización avanzada de AutoCAD Map para el modelado y estructuración cartográfica de la infraestructura, y Excel para el cálculo de presupuestos de potencia óptica, dimensionamiento y gestión de materiales.",
     "current": true
   },
   {
-    "date": "Junio 2016 - Septiembre 2022",
-    "title": "Lead Frontend Architect",
-    "company": "Adevinta Spain",
-    "description": "Parte del equipo Enablers Frontend en Adevinta Spain. Nuestra misión era conseguir que todos los verticales (Fotocasa, MilAnuncios, Habitaclia, Coches.net, Infojobs) convergieran tecnológicamente, con una arquitectura moderna, flexible y optimizada, fomentando buenas prácticas y dando talleres para compartir conocimiento."
+    "date": "Oct 2025 - Presente",
+    "title": "Ingeniero en Telecomunicaciones | Project Engineer",
+    "company": "Cooperativa de Charras",
+    "description": "Lidero el proyecto de transición tecnológica y modernización de infraestructura de HFC a FTTH. A cargo del diseño integral de la red de acceso, el dimensionamiento de capacidades y la planificación técnica estratégica para asegurar la escalabilidad tecnológica y la calidad del servicio.",
+    "current": true
   },
   {
-    "date": "Marzo 2011 - Mayo 2016",
-    "title": "Senior Full-Stack Developer",
-    "company": "Hubii",
-    "description": "Start-up sobre localización de noticias y servicios de información. Desarrollé el website con Jade, BEM, Stylus y CoffeeScript; app de Firefox OS offline-first a 60fps; app de Smart TV con accesibilidad por mando a distancia y push notifications; y una API de Insights con NodeJS, Swagger y MongoDB para parsear contenido web con Big Data."
+    "date": "Mar 2025 - Presente",
+    "title": "Ayudante de Segunda de sistemas y señales I y II",
+    "company": "Universidad Nacional de Rio Cuarto",
+    "description": "Brindo soporte académico en el análisis de señales y sistemas, traduciendo conceptos técnicos avanzados en explicaciones claras. Guío a los alumnos en la resolución de problemas, fomentando su pensamiento crítico y espíritu colaborativo.",
+    "current": true
+  },
+  {
+    "date": "2022 - 2023",
+    "title": "Investigador y Colaborador I+D",
+    "company": "Laboratorio de Redes y GIDAT",
+    "description": "Participé en proyectos orientados a la innovación tecnológica. Me enfoqué en la modernización de infraestructura mediante la implementación de entornos virtualizados en Linux y la orquestación de servicios con Docker, simulando arquitecturas de red complejas y escalables para explorar soluciones de virtualización y automatización."
   }
 ]

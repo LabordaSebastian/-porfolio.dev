@@ -20,7 +20,7 @@ const navItems = [
   {
     title: "Contacto",
     label: "contacto",
-    url: "mailto:miduga@gmail.com",
+    url: "#",
   },
 ]
 ---
@@ -34,15 +34,16 @@ const navItems = [
     {
       navItems.map((link) => (
         <a
-          class="nav-link relative block px-3 py-1.5 rounded-full transition-colors duration-200 hover:text-yellow-500 dark:hover:text-yellow-400"
+          class="nav-link relative block px-3 py-1.5 rounded-full transition-colors duration-200 text-gray-600 dark:text-gray-300 hover:text-[#8a7530] dark:hover:text-[#dfc074]"
           aria-label={link.label}
           href={link.url}
+          data-copy={link.label === "contacto" ? "labordasebastian03@gmail.com" : undefined}
         >
           {link.title}
         </a>
       ))
     }
-    <div class="ml-2 pl-2 border-l border-gray-300/30 dark:border-white/10">
+    <div class="ml-2 pl-2 border-l border-gray-200/60 dark:border-white/20">
       <ThemeToggle />
     </div>
   </nav>
@@ -58,10 +59,10 @@ const navItems = [
         if (entry.isIntersecting) {
           navItems.forEach((item) => {
             if (item.getAttribute("aria-label") == entry.target.id) {
-              item.classList.add("text-yellow-500", "dark:text-yellow-400", "bg-yellow-400/10")
+              item.classList.add("text-[#8a7530]", "dark:text-[#dfc074]", "bg-[#8a6d1b]/10", "dark:bg-[#c9a84c]/10")
               item.classList.remove("text-gray-600", "dark:text-gray-300")
             } else {
-              item.classList.remove("text-yellow-500", "dark:text-yellow-400", "bg-yellow-400/10")
+              item.classList.remove("text-[#8a7530]", "dark:text-[#dfc074]", "bg-[#8a6d1b]/10", "dark:bg-[#c9a84c]/10")
               item.classList.add("text-gray-600", "dark:text-gray-300")
             }
           })
@@ -88,6 +89,21 @@ const navItems = [
         })
       }
     }
+
+    document.querySelectorAll("[data-copy]").forEach((el) => {
+      el.addEventListener("click", (e) => {
+        e.preventDefault()
+        const email = el.getAttribute("data-copy")
+        if (email) {
+          navigator.clipboard.writeText(email).then(() => {
+            el.textContent = "Mail copiado"
+            setTimeout(() => {
+              el.textContent = "Contacto"
+            }, 2000)
+          })
+        }
+      })
+    })
   })
 </script>
 
@@ -99,19 +115,20 @@ const navItems = [
   }
 
   .header-nav {
-    @apply dark:bg-gray-900/80 bg-white/60;
+    @apply bg-white/80 dark:bg-[#3d0c0c]/80;
   }
 
-  .nav-link.text-yellow-500 {
+  .nav-link.text-\[#8a7530\],
+  .dark .nav-link.text-\[#dfc074\] {
     @apply font-semibold;
   }
 
   @keyframes nav-appear {
     0% {
-      @apply dark:bg-gray-900/0 bg-white/0 border-transparent shadow-none;
+      @apply bg-transparent border-transparent shadow-none;
     }
     to {
-      @apply shadow-lg ring-1 backdrop-blur-md ring-white/10 dark:ring-white/5 border-gray-200/20 dark:border-white/5;
+      @apply shadow-lg ring-1 backdrop-blur-md ring-gray-200/60 dark:ring-white/10 border-gray-200/60 dark:border-white/10;
     }
   }
 </style>
