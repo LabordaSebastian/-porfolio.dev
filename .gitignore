@@ -23,3 +23,10 @@ bun.*
 
 pnpm-lock.yaml
 .codegraph/
+
+# video promocional
+promo-video/
+
+# agentes AI y skills
+.agents/
+skills-lock.json
